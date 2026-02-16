@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-content {
+    display: flex;
+    height: 100vh;
+}
+
+.image-container {
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* keeps proportions nicely */
+  display: block;
+}
+
+.right-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    background-color: #f9fafb;
+}
+
+.top{
+    display: flex;
+    flex: 1;
+}
+
+.mid{
+    display: flex;
+    flex: 1;
+
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+
+    /* This creates the lifted effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+}
+
+legend {
+    font-size: large;
+}
+
+.bottom{
+    display: flex;
+    flex: 1;
+}
