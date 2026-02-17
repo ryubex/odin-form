@@ -31,7 +31,7 @@ body {
   display: block;
 }
 
-.right-content{
+.right-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,22 +39,48 @@ body {
     background-color: #f9fafb;
 }
 
-.top{
+.top {
     display: flex;
     flex: 1;
 }
 
-.mid{
-    display: flex;
+.mid {
     flex: 1;
-
+    flex-direction: row;
     background-color: #ffffff;
     padding: 40px;
     border-radius: 8px;
-
     /* This creates the lifted effect */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
+
+form {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+}
+
+input {
+    width: 15rem;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-right: 5rem;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
 
 label {
     display: block;
