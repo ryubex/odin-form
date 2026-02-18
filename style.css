@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .content {
@@ -42,6 +43,8 @@ body {
 .top {
     display: flex;
     flex: 1;
+    align-items: end;
+    margin-left: 20px;
 }
 
 .mid {
@@ -62,18 +65,24 @@ form {
 
 input {
     width: 15rem;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(233, 233, 233);
     padding: 5px;
     border-radius: 5px;
 }
 
-.form-group input.user-invalid {
+input:user-invalid {
   border: 2px solid red;
 }
 
-.form-group input.user-valid {
+input:user-valid {
   border: 2px solid green;
 }
+
+input:focus {
+    outline: none;
+    border-color: 1px #0000ff;
+    box-shadow: 0 0 4px 1px rgba(0, 123, 255, 0.6);}
+
 
 .left {
     display: flex;
@@ -104,4 +113,19 @@ legend {
 .bottom{
     display: flex;
     flex: 1;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+button {
+    width: 10rem;
+    margin: 20px 20px 0 20px !important;
+    background-color: #007BFF;  /* Blue background color */
+    color: white;               /* White text */
+    border: none;               /* Remove border */
+    padding: 12px 20px;         /* Padding for the button */
+    font-size: 16px;            /* Readable text size */
+    border-radius: 8px;         /* Rounded corners */
+    cursor: pointer;           /* Make it look clickable */
+    transition: all 0.3s ease;  /* Smooth transition */
 }

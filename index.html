@@ -21,7 +21,9 @@
 
         <div class="right-content">
             <div class="top">
-                <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores aliquam dolor voluptas reiciendis? Vero placeat repellendus, exercitationem deleniti eaque eligendi atque modi accusamus nulla nostrum quos in hic sapiente!</h1>
+                <h2> This is not a real online service! You know you need something like this 
+                    in your life to help you realize your deepest dreams. 
+                    Sign up now to get started. <br> <br> You know you want to.</h1>
             </div>
 
             <div class="mid">
@@ -65,50 +67,56 @@
                     </div>
                     
                 </form>
-
-                <script>
-                    const password = document.getElementById('pass');
-                    const confirmPassword = document.getElementById('confirm-pass');
-
-                    function checkPasswordMatch() {
-                        console.log("Checking...");
-
-                        if (password.value === "" || confirmPassword.value === "") {
-                            password.classList.remove('user-invalid', 'user-valid');
-                            confirmPassword.classList.remove('user-invalid', 'user-valid');
-                            return;
-                        }
-
-                        if (password.value === confirmPassword.value) {
-                            password.classList.add('user-valid');
-                            confirmPassword.classList.add('user-valid');
-                            password.classList.remove('user-invalid');
-                            confirmPassword.classList.remove('user-invalid');
-                        } else {
-                            password.classList.add('user-invalid');
-                            confirmPassword.classList.add('user-invalid');
-                            password.classList.remove('user-valid');
-                            confirmPassword.classList.remove('user-valid');
-                        }
-                    }
-
-                    password.addEventListener('input', checkPasswordMatch);
-                    confirmPassword.addEventListener('input', checkPasswordMatch);
-
-                    console.log(password.classList);
-                    console.log("JS is running");
-
-
-                </script>
-                
+    
             </div>
 
             <div class="bottom">
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aspernatur ut commodi laboriosam iure dignissimos deleniti labore nihil doloribus totam velit alias adipisci dolores, numquam quisquam fugit debitis quod ullam.</h2>
+                <div class="button">
+                    <button type="button" id="submitBtn">Sign Up</button>
+                </div>
+                <div class="signup">
+                    <h3>Already have an account? <a href="">Log in</a></h3>
+                </div>
+
             </div>
 
         </div>
 
     </div>
+
+    <script>
+        const password = document.getElementById('pass');
+        const confirmPassword = document.getElementById('confirm-pass');
+
+        function checkPasswordMatch() {
+            console.log("Checking...");
+
+            if (password.value === "" || confirmPassword.value === "") {
+                password.classList.remove('user-invalid', 'user-valid');
+                confirmPassword.classList.remove('user-invalid', 'user-valid');
+                return;
+            }
+
+            if (password.value === confirmPassword.value) {
+                password.classList.add('user-valid');
+                confirmPassword.classList.add('user-valid');
+                password.classList.remove('user-invalid');
+                confirmPassword.classList.remove('user-invalid');
+            } else {
+                password.classList.add('user-invalid');
+                confirmPassword.classList.add('user-invalid');
+                password.classList.remove('user-valid');
+                confirmPassword.classList.remove('user-valid');
+            }
+        }
+
+        password.addEventListener('input', checkPasswordMatch);
+        confirmPassword.addEventListener('input', checkPasswordMatch);
+
+        console.log(password.classList);
+        console.log("JS is running");
+
+
+    </script>
 </body>
 </html>
