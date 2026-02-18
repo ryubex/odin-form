@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,17 +26,17 @@
 
             <div class="mid">
                 <h2>Let's Do This!</h2>
-                <form action="#" method="post">
+                <form action="#" method="post" id="passwordForm">
 
                     <div class="left">
                         <div class="form-group">
                             <label for="fname">FIRST NAME</label>
-                            <input type="text" name="fname" id="fname" required>
+                            <input type="text" name="fname" id="fname" placeholder="Juan" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="email">EMAIL</label>
-                            <input type="email" name="email" id="email" required>
+                            <input type="email" name="email" id="email" placeholder="juandelacruz@gmail.com" required>
                         </div>
                         
                         <div class="form-group">
@@ -49,22 +49,58 @@
                     <div class="right">
                         <div class="form-group">
                             <label for="lname">LAST NAME</label>
-                            <input type="text" name="lname" id="lname" required>
+                            <input type="text" name="lname" id="lname" placeholder="Dela Cruz" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="phone">PHONE NUMBER</label>
-                            <input type="tel" name="phone" id="phone" required>
+                            <input type="text" id="phone" name="phone" pattern="(\+63|0)9\d{9}" placeholder="09123456789" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="pass">CONFIRM PASSWORD</label>
-                        <input type="password" name="pass" id="pass" maxlength="12" required>
+                            <label for="confirm-pass">CONFIRM PASSWORD</label>
+                        <input type="password" name="confirm-pass" id="confirm-pass" maxlength="12" required>
                         </div>
                         
                     </div>
                     
                 </form>
+
+                <script>
+                    const password = document.getElementById('pass');
+                    const confirmPassword = document.getElementById('confirm-pass');
+
+                    function checkPasswordMatch() {
+                        console.log("Checking...");
+
+                        if (password.value === "" || confirmPassword.value === "") {
+                            password.classList.remove('user-invalid', 'user-valid');
+                            confirmPassword.classList.remove('user-invalid', 'user-valid');
+                            return;
+                        }
+
+                        if (password.value === confirmPassword.value) {
+                            password.classList.add('user-valid');
+                            confirmPassword.classList.add('user-valid');
+                            password.classList.remove('user-invalid');
+                            confirmPassword.classList.remove('user-invalid');
+                        } else {
+                            password.classList.add('user-invalid');
+                            confirmPassword.classList.add('user-invalid');
+                            password.classList.remove('user-valid');
+                            confirmPassword.classList.remove('user-valid');
+                        }
+                    }
+
+                    password.addEventListener('input', checkPasswordMatch);
+                    confirmPassword.addEventListener('input', checkPasswordMatch);
+
+                    console.log(password.classList);
+                    console.log("JS is running");
+
+
+                </script>
+                
             </div>
 
             <div class="bottom">
