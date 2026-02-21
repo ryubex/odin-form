@@ -23,6 +23,8 @@ body {
 
 .logo {
     position: absolute;
+    top: 60px;
+    left: 140px;
 }
 
 .image-container img {
@@ -80,7 +82,7 @@ input:user-valid {
 
 input:focus {
     outline: none;
-    border-color: 1px #0000ff;
+    border-color: 2px #0000ff;
     box-shadow: 0 0 4px 1px rgba(0, 123, 255, 0.6);}
 
 
